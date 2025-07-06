@@ -27,4 +27,5 @@ jobs:
 
       - name: Sync files to GCS
         run: |
-          gsutil -m rsync -r -x '^\\.git($|/)|gcp-key.json|.*\\.json$' ./ gs://www.heavensdata.com
+          gsutil -m rsync -r -x '^\.git.*|.*\.[jJ][sS][oO][nN]$' ./ gs://www.heavensdata.com
+
