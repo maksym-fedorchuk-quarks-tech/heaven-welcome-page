@@ -3,6 +3,11 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.json
+
+# Log/system files
+.DS_Store
+*.log
 
 # Environments
 .env
