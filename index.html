@@ -83,15 +83,15 @@
                            placeholder="Name"/>
                 </div>
                 <div class="col-12">
-                    <input type="email" name="demo-email" style="width: 50%; margin: auto" id="demo-email" value=""
-                           placeholder="Email"/>
+                    <input type="email" name="demo-email" style="width: 50%; margin: auto" id="email" value=""
+                           placeholder="Email" required/>
                 </div>
 
-                <!-- Break -->
                 <div class="col-12">
                     <ul class="actions special">
-                        <li><a href="about.html" class="button large">Get token</a></li>
+                        <li><a id="getTokenBtn" class="button large">Get token</a></li>
                     </ul>
+                    <div id="response"></div>
                 </div>
             </div>
         </form>
@@ -118,8 +118,8 @@
                         <input type="text" name="name" id="name"/>
                     </div>
                     <div class="field">
-                        <label for="email">Email</label>
-                        <input type="text" name="email" id="email"/>
+                        <label for="footer-email">Email</label>
+                        <input type="text" name="email" id="footer-email"/>
                     </div>
                     <div class="field">
                         <label for="message">Message</label>
@@ -190,63 +190,6 @@
 </html>
 
 
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--  <meta charset="UTF-8" />-->
-<!--  <title>Get Token</title>-->
-<!--  <style>-->
-<!--    body {-->
-<!--      margin: 0;-->
-<!--      height: 100vh;-->
-<!--      background: url('Gate.png') no-repeat center center fixed;-->
-<!--      background-size: cover;-->
-<!--      display: flex;-->
-<!--      justify-content: center;-->
-<!--      align-items: center;-->
-<!--    }-->
-
-<!--    .container {-->
-<!--      background: rgba(4, 116, 32, 0.8);-->
-<!--      padding: 2rem;-->
-<!--      border-radius: 8px;-->
-<!--      text-align: center;-->
-<!--    }-->
-
-<!--    input[type="email"] {-->
-<!--      padding: 0.5rem;-->
-<!--      width: 250px;-->
-<!--      font-size: 1rem;-->
-<!--    }-->
-
-<!--    button {-->
-<!--      padding: 0.5rem 1rem;-->
-<!--      font-size: 1rem;-->
-<!--      margin-left: 1rem;-->
-<!--      cursor: pointer;-->
-<!--    }-->
-
-<!--    #response {-->
-<!--      margin-top: 1rem;-->
-<!--      font-weight: bold;-->
-<!--      min-height: 20px;-->
-<!--    }-->
-
-<!--    #response pre {-->
-<!--      margin: 0;-->
-<!--      white-space: pre-wrap;-->
-<!--      word-wrap: break-word;-->
-<!--    }-->
-
-<!--    .token-display {-->
-<!--      background: rgba(0,0,0,0.3);-->
-<!--      padding: 0.2rem 0.5rem;-->
-<!--      border-radius: 3px;-->
-<!--      font-family: monospace;-->
-<!--      color: #4ecdc4;-->
-<!--      border: 1px solid rgba(78, 205, 196, 0.3);-->
-<!--    }-->
-<!--  </style>-->
 <!--</head>-->
 <!--<body>-->
 <!--  <div class="container">-->
@@ -256,13 +199,12 @@
 <!--    <div id="response"></div>-->
 <!--  </div>-->
 
-<!--  <script src="script.js"></script>-->
-<!--  <script>-->
-<!--    // Add event listener to prevent any form submission behavior-->
-<!--    document.getElementById('getTokenBtn').addEventListener('click', function(e) {-->
-<!--      e.preventDefault();-->
-<!--      getToken();-->
-<!--    });-->
-<!--  </script>-->
-<!--</body>-->
-<!--</html>-->
+<script src="script.js"></script>
+<script>
+    // Add event listener to prevent any form submission behavior
+    document.getElementById('getTokenBtn').addEventListener('click', function(e) {
+      e.preventDefault();
+      getToken();
+    });
+</script>
+</body>
