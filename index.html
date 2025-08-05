@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
+
 <head>
     <title>Heaven's Data</title>
     <meta charset="utf-8"/>
@@ -26,7 +27,7 @@
 
     <!-- Header -->
     <header id="header">
-        <a href="index.html" class="logo">Get access</a>
+        <a class="logo">Get access</a>
     </header>
 
     <!-- Nav -->
@@ -96,13 +97,17 @@
             </div>
         </form>
 
-        <!-- Text stuff -->
+        <!-- Short text on the main page -->
         <article>
             <h2>Who might be interested in that API</h2>
-            <p>Whether you are a student, pet project developer, interviewer who looking for a source for the test task,
-                or educator, Heaven's Data is your open data source for essential content in heaven's events. This API
-                provides access to data from couple of heavens locations. Locations, actually, develop API integrations
-                slow enough, but you can expect more data in the future.
+            <p>Whether you're a student, a pet project developer, an interviewer searching for a test task dataset, or
+                an educator, Heaven's Data is your open data source for essential content related to heavenly events.
+                This API grants access to structured data from a select number of heaven's official locations. <br>
+
+                Please note that while the available data is steadily growing, the pace of API integration from these
+                locations remains rather slow. This is largely due to the layered approval processes and celestial data
+                compliance protocols each location must follow. Rest assured, expansion is on the roadmap - expect more
+                heaven's datasets to appear over time as all the bureaucracy align.
             </p>
         </article>
     </div>
@@ -110,41 +115,18 @@
 
     <!-- Footer -->
     <footer id="footer">
-        <section>
-            <form method="post" action="#">
-                <div class="fields">
-                    <div class="field">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name"/>
-                    </div>
-                    <div class="field">
-                        <label for="footer-email">Email</label>
-                        <input type="text" name="email" id="footer-email"/>
-                    </div>
-                    <div class="field">
-                        <label for="message">Message</label>
-                        <textarea name="message" id="message" rows="3"></textarea>
-                    </div>
-                </div>
-                <ul class="actions">
-                    <li><input type="submit" value="Send Message"/></li>
+          <section class="split contact">
+
+            <section>
+                <h3>Contact us</h3>
+                <ul class="icons alt">
+                    <li>info@heavensdata.com</li>
                 </ul>
-            </form>
+
+            </section>
         </section>
         <section class="split contact">
-            <section class="alt">
-                <h3>Address</h3>
-                <p>1234 Somewhere Road #87257<br/>
-                    Nashville, TN 00000-0000</p>
-            </section>
-            <section>
-                <h3>Phone</h3>
-                <p><a href="#">(000) 000-0000</a></p>
-            </section>
-            <section>
-                <h3>Email</h3>
-                <p><a href="#">info@untitled.tld</a></p>
-            </section>
+
             <section>
                 <h3>Social</h3>
                 <ul class="icons alt">
@@ -153,6 +135,7 @@
                     <li><a href="https://github.com/maksym-fedorchuk-quarks-tech/heaven-data-source"
                            class="icon brands fa-github"><span class="label">GitHub</span></a></li>
                 </ul>
+
             </section>
         </section>
     </footer>
@@ -188,23 +171,3 @@
 
 </body>
 </html>
-
-
-<!--</head>-->
-<!--<body>-->
-<!--  <div class="container">-->
-<!--    <h2>Get Your Token</h2>-->
-<!--    <input type="email" id="email" placeholder="Enter your email" required />-->
-<!--    <button type="button" id="getTokenBtn">Get Token</button>-->
-<!--    <div id="response"></div>-->
-<!--  </div>-->
-
-<script src="script.js"></script>
-<script>
-    // Add event listener to prevent any form submission behavior
-    document.getElementById('getTokenBtn').addEventListener('click', function(e) {
-      e.preventDefault();
-      getToken();
-    });
-</script>
-</body>

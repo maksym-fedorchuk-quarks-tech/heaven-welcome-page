@@ -4,15 +4,14 @@ function getToken() {
     const email = emailInput.value.trim();
     
     if (!email) {
-      responseDiv.innerHTML = '<span style="color: #ff6b6b;">Please enter a valid email.</span>';
+        responseDiv.innerHTML = '<span style="color: #ff6b6b; text-align: center; display: block;">Please enter an email 🙏</span>';
       return;
     }
 
     // Basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      responseDiv.innerHTML = '<span style="color: #ff6b6b;">Please enter a valid email address</span>';
-      return;
+        responseDiv.innerHTML = '<span style="color: #ff6b6b; text-align: center; display: block;">Please enter a valid email address</span>';      return;
     }
 
     responseDiv.innerHTML = '<span style="color: #4ecdc4;">Loading...</span>';
@@ -47,22 +46,26 @@ function getToken() {
       }
 
       if (parsedData.token) {
-        responseDiv.innerHTML = `
-          <div style="background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 5px; margin-top: 1rem;">
-            <h3 style="color: #4ecdc4; margin: 0 0 0.5rem 0;">✅ Success!</h3>
-            <p style="color: white; margin: 0.5rem 0;"><strong>Token:</strong> <span style="background: rgba(0,0,0,0.3); padding: 0.2rem 0.5rem; border-radius: 3px; font-family: monospace;">${parsedData.token}</span></p>
-            ${parsedData.message ? `<p style="color: white; margin: 0.5rem 0;"><strong>Message:</strong> ${parsedData.message}</p>` : ''}
-          </div>
-        `;
-      } else {
-        responseDiv.innerHTML = `
-          <div style="background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 5px; margin-top: 1rem;">
-            <h3 style="color: #4ecdc4; margin: 0 0 0.5rem 0;">📋 Response</h3>
-            <pre style="color: white; text-align: left; background: rgba(0,0,0,0.3); padding: 0.5rem; border-radius: 3px; overflow-x: auto;">${JSON.stringify(parsedData, null, 2)}</pre>
-          </div>
-        `;
-      }
-    })
+    responseDiv.innerHTML = `
+      <div style="text-align: center;">
+        <div style="background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 5px; margin-top: 1rem;">
+          <h3 style="color: #4ecdc4; margin: 0 0 0.5rem 0;">Token successfully generated ✅</h3>
+          <h4 style="color: white; margin: 0.5rem 0;"><strong>Your token is:</strong> <span style="background: rgba(0,0,0,0.3); padding: 0.2rem 0.5rem; border-radius: 3px; font-family: monospace;">${parsedData.token}</span></h4>
+          ${parsedData.message ? `<p style="color: white; margin: 0.5rem 0;"><strong>Message:</strong> ${parsedData.message}</p>` : ''}
+        </div>
+      </div>
+    `;
+  } else {
+    responseDiv.innerHTML = `
+      <div style="text-align: center;">
+        <div style="background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 5px; margin-top: 1rem;">
+          <h3 style="color: #4ecdc4; margin: 0 0 0.5rem 0;">📋 Response</h3>
+          <pre style="color: white; text-align: left; background: rgba(0,0,0,0.3); padding: 0.5rem; border-radius: 3px; overflow-x: auto;">${JSON.stringify(parsedData, null, 2)}</pre>
+        </div>
+      </div>
+    `;
+  }
+})
     .catch(error => {
       console.error('Error:', error);
       responseDiv.innerHTML = `
