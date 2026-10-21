@@ -19,7 +19,7 @@
     <div id="intro">
         <h1>Explore Heaven's Data<br/>
             By API</h1>
-        <p>This free API service provides seamless access to explore raw soul event data from various locations</p>
+        <p>A free, keyless API inspired by Preacher: characters, locations and an endless supply of freshly generated souls</p>
         <ul class="actions">
             <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
         </ul>
@@ -27,20 +27,20 @@
 
     <!-- Header -->
     <header id="header">
-        <a class="logo">Get access</a>
+        <a class="logo">Get started</a>
     </header>
 
     <!-- Nav -->
     <nav id="nav">
         <ul class="links">
-            <li class="active"><a href="index.html">Get access</a></li>
+            <li class="active"><a href="index.html">Get started</a></li>
             <li><a href="about.html">About the project</a></li>
             <li><a href="locations.html">Our locations</a></li>
         </ul>
         <ul class="icons">
             <li><a href="https://www.instagram.com/heavens.data" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
             </li>
-            <li><a href="https://github.com/maksym-fedorchuk-quarks-tech/heaven-data-source"
+            <li><a href="https://github.com/maksym-fedorchuk-quarks-tech/heaven-welcome-page"
                    class="icon brands fa-github"><span class="label">GitHub</span></a></li>
         </ul>
     </nav>
@@ -52,9 +52,9 @@
         <article class="post featured">
             <header class="major">
                 <h2>What is all about</h2>
-                <p>Heavens API offers access to a raw data from various heaven locations<br>
-                    It's quite similar to the data about mobile platform usage<br>
-                    To be honest we make it similar for more intuitive understanding<br>
+                <p>Heavens API serves a small catalog of characters and locations from a Preacher-inspired universe<br>
+                    and generates lists of souls, with their locations and statuses, on the fly<br>
+                    No key, no sign-up, nothing stored<br>
                     It's free and open</p>
             </header>
             <a href="#" class="image main"><img src="images/pic01.jpg" alt=""/></a>
@@ -71,44 +71,31 @@
         </article>
 
 
-        <!-- GET TOKEN FORM -->
-        <form method="post" action="#">
+        <!-- Quick start -->
+        <article>
             <header class="major">
-                <h2>Get token for api access</h2>
-                <p>Enter your name and email below to receive your API access token and start exploring data:</p>
+                <h2>Start in one request</h2>
+                <p>There is nothing to sign up for. Just call it:</p>
             </header>
-
-            <div class="row gtr-uniform">
-                <div class="col-12">
-                    <input type="text" name="demo-name" style="width: 50%; margin: auto" id="demo-name" value=""
-                           placeholder="Name"/>
-                </div>
-                <div class="col-12">
-                    <input type="email" name="demo-email" style="width: 50%; margin: auto" id="email" value=""
-                           placeholder="Email" required/>
-                </div>
-
-                <div class="col-12">
-                    <ul class="actions special">
-                        <li><a id="getTokenBtn" class="button large">Get token</a></li>
-                    </ul>
-                    <div id="response"></div>
-                </div>
-            </div>
-        </form>
+            <p><code>curl https://heavensdata.com/api/characters?name=jesse</code></p>
+            <p><code>curl https://heavensdata.com/api/souls/batch</code></p>
+            <ul class="actions special">
+                <li><a href="about.html" class="button large">Read the docs</a></li>
+            </ul>
+        </article>
 
         <!-- Short text on the main page -->
         <article>
             <h2>Who might be interested in that API</h2>
             <p>Whether you're a student, a pet project developer, an interviewer searching for a test task dataset, or
-                an educator, Heaven's Data is your open data source for essential content related to heavenly events.
-                This API grants access to structured data from a select number of heaven's official locations. <br>
+                an educator, Heaven's Data is your open data source for practicing real API work: paging, filtering,
+                rate limits and bulk loading.<br>
 
-                Please note that while the available data is steadily growing, the pace of API integration from these
-                locations remains rather slow. This is largely due to the layered approval processes and celestial data
-                compliance protocols each location must follow. Rest assured, expansion is on the roadmap - expect more
-                heaven's datasets to appear over time as all the bureaucracy align.
+                Characters and locations are a small fixed catalog. Souls are generated fresh on every request, so
+                you can pull as many as the limits allow without anything ever being stored about you.
             </p>
+            <p>Heaven's Data is an unofficial fan project. It is not affiliated with, or endorsed by, the creators or
+                producers of Preacher.</p>
         </article>
     </div>
 
@@ -132,7 +119,7 @@
                 <ul class="icons alt">
                     <li><a href="https://www.instagram.com/heavens.data" class="icon brands fa-instagram"><span
                             class="label">Instagram</span></a></li>
-                    <li><a href="https://github.com/maksym-fedorchuk-quarks-tech/heaven-data-source"
+                    <li><a href="https://github.com/maksym-fedorchuk-quarks-tech/heaven-welcome-page"
                            class="icon brands fa-github"><span class="label">GitHub</span></a></li>
                 </ul>
 
@@ -160,14 +147,6 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
-<script src="assets/get_token.js"></script>
-<script>
-    // Add event listener to prevent any form submission behavior
-    document.getElementById('getTokenBtn').addEventListener('click', function(e) {
-      e.preventDefault();
-      getToken();
-    });
-</script>
 
 </body>
 </html>

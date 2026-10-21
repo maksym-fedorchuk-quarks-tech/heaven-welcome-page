@@ -1,0 +1,7 @@
+{
+  "name": "heavens-data",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Heavens Data: open, keyless, stateless API inspired by Preacher, plus its portal"
+}
